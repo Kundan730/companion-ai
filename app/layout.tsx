@@ -7,6 +7,8 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/toaster';
 import { ProModal } from '@/components/pro-modal';
 
+import { CrispProvider } from '@/components/crisp-provider';
+
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,6 +26,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
+        <CrispProvider />
         <body className={cn("bg-secondary", inter.className)}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <ProModal />
